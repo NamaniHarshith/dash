@@ -170,3 +170,37 @@
     padding: 0.6rem;
   }
 }
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.illustration-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.illustration-section img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.illustration-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.illustration-section p {
+  font-size: 1em;
+}
+
+.illustration-section a {
+  color: #6c63ff;
+  text-decoration: none;
+}
