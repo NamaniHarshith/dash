@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout */
+.signup-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #E5E5E5;
 }
 
-.App-link {
-  color: #61dafb;
+.illustration-section {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.illustration-section img {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  flex: 1;
+  max-width: 50%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5A4FF2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form .password-container {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form .password-container span {
+  margin-left: 0.5rem;
+  color: #5A4FF2;
+  cursor: pointer;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.social-login button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #F1F1F1;
+  border: none;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .illustration-section,
+  .signup-form {
+    max-width: 90%;
   }
 }
