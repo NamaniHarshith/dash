@@ -1,0 +1,264 @@
+/* Layout */
+.signup-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #E5E5E5;
+}
+
+.illustration-section {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.illustration-section img {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  flex: 1;
+  max-width: 50%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5A4FF2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form .password-container {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form .password-container span {
+  margin-left: 0.5rem;
+  color: #5A4FF2;
+  cursor: pointer;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.social-login button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #F1F1F1;
+  border: none;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+
+/* Large screens (1536px) */
+@media (max-width: 1536px) {
+  .signup-container {
+    padding: 1rem;
+  }
+  .illustration-section,
+  .signup-form {
+    max-width: 45%;
+  }
+}
+
+/* Medium screens (1280px) */
+@media (max-width: 1280px) {
+  .illustration-section,
+  .signup-form {
+    max-width: 80%;
+  }
+  .signup-form {
+    padding: 1.5rem;
+  }
+}
+
+/* Small screens (768px) */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .illustration-section,
+  .signup-form {
+    max-width: 90%;
+  }
+}
+
+/* Mobile screens (667px and below) */
+@media (max-width: 667px) {
+  .illustration-section {
+    display: none;
+  }
+  .signup-form {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .signup-form h2 {
+    font-size: 1.5rem;
+  }
+  .signup-form input,
+  .signup-form button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Smaller mobile screens (390px, 375px, and 428px) */
+@media (max-width: 428px) {
+  .signup-form {
+    padding: 0.5rem;
+  }
+  .signup-form h2 {
+    font-size: 1.25rem;
+  }
+  .signup-form input,
+  .signup-form button {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+  .social-login button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .signup-form {
+    padding: 0.5rem;
+  }
+  .signup-form input,
+  .signup-form button {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.illustration-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.illustration-section img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.illustration-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.illustration-section p {
+  font-size: 1em;
+}
+
+.illustration-section a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Authentication Container */
+.auth-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  justify-content: flex-start;
+}
+
+/* Illustration Section */
+.illustration-section {
+  margin-right: 2rem;
+}
+
+.illustration-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text Section */
+.text-section {
+  text-align: left;
+}
+
+/* Toggle Link */
+.toggle-link {
+  color: blue;
+  cursor: pointer;
+}
