@@ -6,14 +6,15 @@ function SignupForm() {
 
   return (
     <div className="signup-container">
+  
       {/* Form Section */}
       <div className="form-section">
         <div className="signup-form">
           <h2>Sign Up</h2>
           <form>
             <input type="email" placeholder="Enter Email" required />
-            <input type="text" placeholder="Create Username" required />
-            <input type="text" placeholder="Contact Number" required />
+            <input type="text" placeholder="Create User Name" required />
+            <input type="text" placeholder="Contact number" required />
             <div className="password-container">
               <input type={showPassword ? "text" : "password"} placeholder="Password" required />
               <span onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</span>
@@ -25,9 +26,15 @@ function SignupForm() {
             <button type="submit">Register</button>
           </form>
           <p>or continue with</p>
-          <div className="social-login">
-            <button>Google</button>
-            <button>Apple</button>
+          <div className="social-login" style={{ marginTop: '10px' }}>
+            {/* Google Button */}
+            <button style={{ backgroundColor: 'transparent', border: 'none', padding: '0', cursor: 'pointer', display: 'block', marginBottom: '0px' }}>
+              <img src="\images\google logo.png" alt="Google" style={{ width: '30px', height: '30px' }} />
+            </button>
+            {/* Apple Button */}
+            <button style={{ backgroundColor: 'transparent', border: 'none', paddingRight: 100, cursor: 'pointer', display: 'block' }}>
+              <img src="\images\google logo.png" alt="Apple" style={{ width: '30px', height: '30px' }} />
+            </button>
           </div>
         </div>
       </div>

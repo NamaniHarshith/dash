@@ -21,21 +21,55 @@ function App() {
     return <LandingPage />;
   }
 
-  // Render the sign-in or sign-up forms if not authenticated
   return (
-    <div className="auth-container">
-      <div className="illustration-section">
-        <img src="https://your-illustration-url.com/illustration.png" alt="Sign up illustration" />
-        <h2>{showSignUp ? "Sign up to BankDash" : "Sign in to BankDash"}</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        {showSignUp ? (
-          <p>If you already have an account, <span className="toggle-link" onClick={toggleForm}>Login here!</span></p>
-        ) : (
-          <p>If you don’t have an account, <span className="toggle-link" onClick={toggleForm}>Register here!</span></p>
-        )}
+    <div>
+      {/* Top Navbar with Logo */}
+      <div className="navbar">
+        <h2>Your Logo</h2>
       </div>
-      <div className="form-section">
-        {showSignUp ? <SignupForm /> : <SignInForm onSignIn={handleSignIn} />}
+
+      {/* Authentication section */}
+      <div className="auth-container">
+        
+        <div className="auth-left">
+          <div className="auth-section">
+            <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: '#333', fontFamily: 'sans-serif', marginBottom: 12 }}>
+              {showSignUp ? "Sign up to" : "Sign in to"}
+            </h2>
+
+            <p style={{ fontSize: '30px', fontWeight: 'normal', fontFamily: 'sans-serif', color: '#333', marginTop: 12 }}>
+              Lorem Ipsum is simply
+            </p>
+
+            {showSignUp ? (
+              <p>If you already have an account<br />You can <span className="toggle-link" onClick={toggleForm}>Login here!</span></p>
+            ) : (
+              <p>If you don’t have an account <span className="toggle-link" onClick={toggleForm}>Register here!</span></p>
+            )}
+          </div>
+                     {/* Image Section to the Right of Auth Section */}
+        <div className="auth-right">
+        <img 
+  src="\images\Rectangle 2.png" 
+  alt="Auth illustration" 
+  style={{
+    width: '100%',
+    maxWidth: '200px',  // Max width for the image
+    height: 'auto',
+  }} 
+/>
+
+        </div>
+ 
+  
+          {/* Form Section */}
+          <div className="form-section">
+            {showSignUp ? <SignupForm /> : <SignInForm onSignIn={handleSignIn} />}
+          </div>
+          
+        </div>
+
+      
       </div>
     </div>
   );
