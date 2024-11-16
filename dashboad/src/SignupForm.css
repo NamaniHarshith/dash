@@ -1,0 +1,77 @@
+.signup-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 10px;
+  }
+  
+  .signup-container h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  .signup-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-container input,
+  .signup-container button {
+    width: 100%; /* Ensure they take up the full width of the container */
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in total width */
+  }
+  
+  .signup-container input {
+    border: 1px solid #ddd;
+  }
+  
+  .signup-container button {
+    color: #fff;
+    background-color: #5A4FF2;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem; /* Adds space between the button and the field above it */
+  }
+  
+  .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-container span {
+    position: absolute;
+    right: 10px;
+    color: #5A4FF2;
+    cursor: pointer;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .social-login button {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #F1F1F1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
