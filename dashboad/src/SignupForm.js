@@ -12,18 +12,18 @@ function SignupForm() {
         <div className="signup-form">
           <h2>Sign Up</h2>
           <form>
-            <input type="email" placeholder="Enter Email" required />
-            <input type="text" placeholder="Create User Name" required />
-            <input type="text" placeholder="Contact number" required />
+            <input type="email"  style={{ backgroundColor: '#F0EFFF', padding: '14px',border:'none', borderRadius: '6px' }} placeholder="Enter Email" required />
+            <input type="text" style={{ backgroundColor: '#F0EFFF', padding: '14px', border:'none',borderRadius: '6px' }}  placeholder="Create User Name" required />
+            <input type="text" style={{ backgroundColor: '#F0EFFF', padding: '14px',border:'none', borderRadius: '6px' }}  placeholder="Contact number" required />
             <div className="password-container">
-              <input type={showPassword ? "text" : "password"} placeholder="Password" required />
+              <input type={showPassword ? "text" : "password"} style={{ backgroundColor: '#F0EFFF', padding: '14px', border:'none',borderRadius: '6px' }}  placeholder="Password" required />
               <span onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</span>
             </div>
             <div className="password-container">
-              <input type={showPassword ? "text" : "password"} placeholder="Confirm Password" required />
+              <input type={showPassword ? "text" : "password"} style={{ backgroundColor: '#F0EFFF', padding: '14px', border:'none',borderRadius: '6px' }}  placeholder="Confirm Password" required />
               <span onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</span>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" style={{ padding: '14px', border:'none' }}>Register</button>
           </form>
           <p>or continue with</p>
           <div className="social-login" style={{ marginTop: '10px' }}>

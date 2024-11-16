@@ -42,7 +42,7 @@ function App() {
             </p>
 
             {showSignUp ? (
-              <p>If you already have an account<br />You can <span className="toggle-link" onClick={toggleForm}>Login here!</span></p>
+              <p>If you already have an account<br />You can <span className="toggle-link" onClick={toggleForm}>Login here !</span></p>
             ) : (
               <p>If you don’t have an account <span className="toggle-link" onClick={toggleForm}>Register here!</span></p>
             )}

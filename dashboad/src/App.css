@@ -28,7 +28,8 @@
 }
 .auth-left {
   flex:1;
-  padding-top:8rem ;
+  margin-top: 2rem;
+  padding-top:3rem ;
   padding-left: 10rem;
 }
 .auth-right{
@@ -48,6 +49,3 @@
   font-weight: bold;
 }
 
-.form-section {
-  margin-top: 1rem;
-}

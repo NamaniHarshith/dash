@@ -28,7 +28,6 @@
     
     justify-content: flex-end; /* Align items to the right */
     gap: 1rem; /* Adds spacing between the buttons */
-    margin-top: 1rem;
     margin-left: 10rem;
   }
   
@@ -87,7 +86,6 @@
   .social-login button {
     flex: 1;
     margin: 0 0.5rem;
-    padding: 1rem;
     font-size: 1rem;
     color: #333;
     background-color: #F1F1F1;
@@ -97,7 +95,6 @@
   }
   .logo-container {
     position: absolute;
-    top: 10px;
     left: 10px;
     z-index: 1000; /* Ensure logo stays on top */
   }
