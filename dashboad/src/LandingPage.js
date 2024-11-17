@@ -88,14 +88,67 @@ function LandingPage() {
       </aside>
 
       <main className="content">
-        <header className="top-bar">
-          <p>Overview</p>
-          <input type="text" placeholder="Search for something" className="search-bar" style={{ width: '200px', height: '20px', marginRight: '10px',borderRadius:'20px',border:'none' }} />
-          <div className="top-bar-icons">
-            <img src="https://your-profile-url.com/profile.png" alt="User Profile" className="profile-icon" />
-            <img src="https://your-settings-url.com/settings.png" alt="Settings" className="settings-icon" />
-          </div>
-        </header>
+      <header className="top-bar" style={{ height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px' }}>
+  {/* Title */}
+  <p style={{ fontSize: '30px', margin: 0 }}>Overview</p>
+
+  {/* Search Bar */}
+  <div style={{ width: '400px', height: '40px' }}></div>
+
+  <div className="search-container" style={{ position: 'relative', display: 'inline-block' }}>
+    {/* Material Icon for search */}
+    <span
+      className="material-icons"
+      style={{
+        position: 'absolute',
+        left: '10px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        fontSize: '16px',
+      }}
+    >
+      search
+    </span>
+    
+    <input
+      type="text"
+      placeholder="Search for something"
+      className="search-bar"
+      style={{
+        width: '250px',
+        height: '30px',
+        paddingLeft: '30px', // Adds padding so text doesn't overlap the icon
+        borderRadius: '20px',
+        border: 'none',
+        fontSize: '14px',
+      }}
+    />
+  </div>
+
+  {/* Profile & Settings Icons */}
+  <div className="top-bar-icons" style={{ display: 'flex', alignItems: 'center' }}>
+    <img
+      src="\images\settings solid 1.png"
+      alt="Settings"
+      className="settings-icon"
+      style={{ width: '30px', height: '30px', marginRight: '10px' }} // Add margin to the right of the first image
+    />
+    <img
+      src="\images\Group 3.png"
+      alt="Group"
+      className="group-icon"
+      style={{ width: '30px', height: '30px', marginRight: '10px' }} // Add margin to the right of the second image
+    />
+    <img
+      src="\images\pexels-christina-morillo-1181690 1.png"
+      alt="User Profile"
+      className="profile-icon"
+      style={{ width: '30px', height: '30px', borderRadius: '50%' }} // No margin here since it's the last item
+    />
+  </div>
+</header>
+
+
 
         <section className="overview-section">
           <div className="card-balance">
