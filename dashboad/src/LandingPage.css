@@ -5,6 +5,8 @@
     color: grey; /* Sets the font color to grey */
   }
   
+  
+  
   .sidebar {
     width: 200px;
     background-color: #fff;
@@ -28,7 +30,6 @@
   
   .content {
     flex: 1;
-    padding: 20px;
     background-color: #ECF0F1;
   }
   
@@ -50,15 +51,195 @@
   }
   
   .overview-section {
+    padding-left: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap:20px,;
     margin-top: 20px;
   }
   
   .card-balance, .weekly-activity, .recent-transactions, .expense-statistics {
     background-color: white;
-    padding: 20px;
+    width: 300px;
+    
     border-radius: 8px;
+  }
+  .card-2{
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(135deg, #fff, #fff);
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+  }
+  .smal-bar {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-between; /* Space items evenly */
+    gap: 20px; /* Optional: Adds space between the elements */
+  }
+  
+  .smal-bar h3,
+  .smal-bar h4 {
+    margin: 0; /* Remove default margin */
+  }
+  .card {
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(135deg, #3a47d5, #54a0ff);
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .balance {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .balance-amount {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .card-details div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+  }
+  
+  .chip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+  }
+  .balance-2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .balance-amount-2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: gray;
+  }
+  
+  .card-details-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: gray;
+  }
+  
+  .card-details-2 div {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+  }
+  
+  .card-number-2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    color: gray;
+  }
+  
+  .chip-2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    background: gray;
+    border-radius: 5px;
+  }
+  .recent-transactions-list {
+    background-color: #f9fafb;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  .transaction-item {
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+  }
+  
+  .transaction-item:last-child {
+    border-bottom: none;
+  }
+  
+  .transaction-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .transaction-details p {
+    margin: 0;
+    text-align:left;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .transaction-details small {
+    color: #6b7280;
+  }
+  
+  .transaction-amount {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .transaction-amount.negative {
+    color: #ef4444;
+  }
+  
+  .transaction-amount.positive {
+    color: #10b981;
   }
   
