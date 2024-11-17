@@ -5,25 +5,92 @@ function LandingPage() {
   return (
     <div className="app-container">
       <aside className="sidebar">
-        <h2>BankDash</h2>
+      <div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\iconfinder_vector_65_09_473792 1@2x.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />
+  <p style={{ fontSize: '20px',color:'black',}}>BankDash.</p>
+</div>
         <nav>
           <ul>
-            <li>Dashboard</li>
-            <li>Transactions</li>
-            <li>Accounts</li>
-            <li>Investments</li>
-            <li>Credit Cards</li>
-            <li>Loans</li>
-            <li>Services</li>
-            <li>My Privileges</li>
-            <li>Settings</li>
+            <li style={{ color:'blue'}} > <div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\home 2.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />
+  Dashboard
+</div>
+</li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\transfer 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />Transaction
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\user 3 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />Accounts
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\economic-investment 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />
+  Investments
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\credit-card 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />
+  Credit Cards
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\loan 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />
+  Loans
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\service 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />Services
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\econometrics 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />My priviliges
+</div></li>
+            <li><div style={{ display: 'flex', alignItems: 'center',gap:'5px' }}>
+  <img 
+    src="\images\settings solid 1.png" 
+    alt="Bank logo" 
+    style={{ width: '20px', height: '20px', marginRight: '10px' }} 
+  />Settings
+</div></li>
           </ul>
         </nav>
       </aside>
 
       <main className="content">
         <header className="top-bar">
-          <input type="text" placeholder="Search for something" className="search-bar" />
+          <p>Overview</p>
+          <input type="text" placeholder="Search for something" className="search-bar" style={{ width: '200px', height: '20px', marginRight: '10px',borderRadius:'20px',border:'none' }} />
           <div className="top-bar-icons">
             <img src="https://your-profile-url.com/profile.png" alt="User Profile" className="profile-icon" />
             <img src="https://your-settings-url.com/settings.png" alt="Settings" className="settings-icon" />
