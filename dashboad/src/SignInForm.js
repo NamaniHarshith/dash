@@ -9,12 +9,14 @@ function SignInForm({ onSignIn }) {
   };
 
   return (
-    <div className="form-section">
+    
+    <div className="form-section-1">
       <h2>Sign in</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Enter email or user name" required />
         <input type="password" placeholder="Password" required />
-        <a href="/forgot-password" className="forgot-password">Forgot password?</a>
+        <a  href="/forgot-password" className="forgot-password">Forgot password?</a>
+        <p> </p>
         <button type="submit" className="login-button">Login</button>
       </form>
       <p>or continue with</p>
@@ -23,6 +25,7 @@ function SignInForm({ onSignIn }) {
         <button className="google-login">G</button>
       </div>
     </div>
+    
   );
 }
 

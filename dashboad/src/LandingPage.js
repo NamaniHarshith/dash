@@ -1,7 +1,90 @@
 import React from 'react';
 import './LandingPage.css'; // This will contain specific styling for the landing page
-
+import { Line, Bar, Pie } from 'react-chartjs-2'; // Import Pie chart
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement,ChartDataLabels); // Register ArcElement for Pie chart
 function LandingPage() {
+  // Chart data and configuration
+  const chartData = {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    datasets: [
+      {
+        label: 'Transactions ($)',
+        data: [1200, 900, 1500, 800, 2000, 1700, 2200], // Replace with your dynamic data if needed
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 2,
+      },
+      {
+        label: 'Revenue ($)',
+        data: [1000, 1100, 1300, 700, 1900, 1600, 2100], // Second dataset for comparison
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+  const pieChartData = {
+    labels: ['Entertainment', 'Bill Expense', 'Others', 'Investments'],
+    datasets: [
+      {
+        label: 'Expense Distribution',
+        data: [30, 15, 35, 20], // Corresponding percentages
+        backgroundColor: [
+          'rgba(255, 99, 132, 1)',  // Entertainment
+          'rgba(54, 162, 235, 1)',  // Bill Expense
+          'rgba(255, 206, 86, 1)',  // Others
+          'rgba(75, 192, 192, 1)',  // Investments
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)', 
+          'rgba(54, 162, 235, 1)', 
+          'rgba(255, 206, 86, 1)', 
+          'rgba(75, 192, 192, 1)', 
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const pieChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display:false,
+      },
+      datalabels: {
+        display: true,
+        color: 'black',
+        font: {
+          weight: 'bold',
+          size: 10,
+        },
+        formatter: (value, context) => {
+          const label = context.chart.data.labels[context.dataIndex];
+          return `${label}: ${value}%`; // Display category name and value
+        },
+      },
+    },
+  };
+
+
   return (
     <div className="app-container">
       <aside className="sidebar">
@@ -178,7 +261,10 @@ function LandingPage() {
         Balance
         <div className="balance-amount">$5,756</div>
       </div>
-      <div className="chip"></div>
+      <div className="chip">
+      <img src="\images\Chip_Card@2x.png" alt="Card Icon" style={{ width: '40px',height:'35px' }} />
+
+      </div>
       <div className="card-details">
         <div>
           Card Holder
@@ -201,7 +287,9 @@ function LandingPage() {
                     Balance
                     <div className="balance-amount-2">$5,756</div>
                   </div>
-                  <div className="chip-2"></div>
+                  <div className="chip-2">
+                  <img src="\images\Chip_Card@2x.png" alt="Card Icon" style={{ width: '40px', height:'35px' }} />
+                  </div>
                   <div className="card-details-2">
                     <div>
                       Card Holder
@@ -252,19 +340,19 @@ function LandingPage() {
   </div>
 </div>
 
-          <div className="weekly-activity">
-            <h3>Weekly Activity</h3>
-            {/* Placeholder for chart or graph */}
+          
+            <div className="weekly-activity">
+  <h3>Weekly Activity</h3>
+  <div style={{ width: '100%', height: '250px' }}>
+    <Bar data={chartData} options={chartOptions} />
+  </div>
+
           </div>
 
-          <div className="recent-transactions">
-            <h3>Recent Transactions</h3>
-            {/* Placeholder for recent transaction list */}
-          </div>
-
+        
           <div className="expense-statistics">
-            <h3>Expense Statistics</h3>
-            {/* Placeholder for pie chart */}
+            <h3 >Expense Statistics</h3>
+            <Pie style={{width:'300px',height:'240px'}} data={pieChartData} options={pieChartOptions} />
           </div>
           
 </section>
